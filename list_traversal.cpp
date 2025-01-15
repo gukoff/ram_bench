@@ -57,7 +57,7 @@ double time(Int N, Int iters) {
 
 	for (Int it=0; it<iters; ++it) {
 		// Run through all the nodes:
-		Node* node = start_node;
+		volatile Node* node = start_node;
 		while (node) {
 			node = node->next;
 		}
